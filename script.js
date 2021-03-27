@@ -23,13 +23,12 @@ function find(c){
 //Set up the API key
 var APIKey="a0aca8a89948154a4182dcecc780b513";
 // Grab current weather for city search from API
-function displayWeather(e){
+currentCity.addEventListener("click", function(e) {
     e.preventDefault();
     if(searchCity.val().trim()!==""){
         city=searchCity.val().trim();
         currentWeather(city);
-    }
-}
+});
 // API Call
 function currentWeather(city){
     // GET call from API
@@ -160,7 +159,6 @@ clearHist.addEventListener("click", function(e) {
 });
 
 //Click Handlers
-$(currentCity).on("click",displayWeather);
 $(document).on("click",invokePastSearch);
 $(window).on("load",loadlastCity);
 
