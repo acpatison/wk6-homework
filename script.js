@@ -152,7 +152,8 @@ function loadlastCity(){
     }
 }
 //Clear the search history from the page
-clearHist.addEventListener("click", function() {
+clearHist.addEventListener("click", function(e) {
+    e.preventDefault();
     sCity=[];
     localStorage.removeItem("cityName");
     document.location.reload();
