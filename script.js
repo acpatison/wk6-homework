@@ -23,14 +23,14 @@ function find(c){
 //Set up the API key
 var APIKey="a0aca8a89948154a4182dcecc780b513";
 // Grab current weather for city search from API
-function displayWeather(event){
-    event.preventDefault();
+function displayWeather(e){
+    e.preventDefault();
     if(searchCity.val().trim()!==""){
         city=searchCity.val().trim();
         currentWeather(city);
     }
 }
-// Here we create the AJAX call
+// API Call
 function currentWeather(city){
     // GET call from API
     var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + APIKey;
