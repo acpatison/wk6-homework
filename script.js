@@ -23,7 +23,7 @@ function find(c){
 //Set up the API key
 var APIKey="a0aca8a89948154a4182dcecc780b513";
 // Grab current weather for city search from API
-currentCity.addEventListener("click", function(e) {
+searchBtn.addEventListener("click", function(e) {
     e.preventDefault();
     if(searchCity.val().trim()!==""){
         city=searchCity.val().trim();
