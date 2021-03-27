@@ -28,6 +28,7 @@ searchBtn.addEventListener("click", function(e) {
     if(searchCity.val().trim()!==""){
         city=searchCity.val().trim();
         currentWeather(city);
+    }
 });
 // API Call
 function currentWeather(city){
